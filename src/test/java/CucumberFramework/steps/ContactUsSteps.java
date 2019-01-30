@@ -7,10 +7,15 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class ContactUsSteps {
@@ -32,7 +37,7 @@ public class ContactUsSteps {
     public void i_access_webdriveruniversity() throws Throwable {
         System.out.println("I access webdriveruniversity");
         driver.get("http://webdriveruniversity.com/");
-        Thread.sleep(5000);
+        Thread.sleep(2000);
     }
 
     @When("^I click on the contact us button$")
@@ -41,21 +46,33 @@ public class ContactUsSteps {
         System.out.println("I click on the contact us button");
     }
 
-    @When("^I enter a firstname$")
-    public void i_enter_a_firstname() throws Throwable {
-        //@SupperessWarnings("unused")
-                String winHandleBefore = driver.getWindowHandle();
-        for (String winhandle : driver.getWindowHandles()){
-            driver.switchTo().window(winhandle);
-        }
-        driver.switchTo().frame("contact_form");
-        driver.findElement(By.name("first_name")).sendKeys("Art");
+    @When("^I enter a \"([^\"]*)\" firstname$")
+    public void i_enter_a_firstname(String firstname) throws Throwable {
+        Set<String> st= driver.getWindowHandles();
+        Iterator<String> it = st.iterator();
+        String parent =  it.next();
+        String child =it.next();
+//swtich to parent
+        driver.switchTo().window(parent);
+        System.out.println("Returned to parent");
+// switch to child
+        driver.switchTo().window(child);
+
+       /*String winHandleBefore = driver.getWindowHandle();
+       for (String winHandle : driver.getWindowHandle()) {
+           driver.switchTo().window(winHandle);
+       }*/
+
+       driver.findElement(By.cssSelector("input[name='first_name']")).sendKeys(firstname);
+        //driver.findElement(By.xpath("//input[@name='first_name']")).sendKeys("Arto");
+        //driver.findElement(By.xpath("//input[contains(@name, 'first_name')]")).sendKeys("Arto");
+
         System.out.println("I enter a firstname");
     }
 
-    @When("^I enter a lastname$")
-    public void i_enter_a_lastname() throws Throwable {
-        driver.findElement(By.name("last_name")).sendKeys("Ur");
+    @When("^I enter a \"([^\"]*)\" lastname$")
+    public void i_enter_a_lastname(String lastname) throws Throwable {
+        driver.findElement(By.name("last_name")).sendKeys(lastname);
         System.out.println("I enter a lastname");
     }
 
@@ -66,12 +83,12 @@ public class ContactUsSteps {
     }
 
     @When("^I enter comments$")
-    public void i_enter_comments(DataTable argl) throws Throwable {
-        List<List<String>> data = argl.raw();
-        driver.findElement(By.name("message")).sendKeys(data.get(0).get(0)+ "\n");
-        driver.findElement(By.name("message")).sendKeys(data.get(0).get(1)+ "\n");
-        driver.findElement(By.name("message")).sendKeys(data.get(1).get(0)+ "\n");
-        driver.findElement(By.name("message")).sendKeys(data.get(1).get(1));
+    public void i_enter_comments(DataTable tab1) throws Throwable {
+        List<List<String>> data1 = tab1.raw();
+        driver.findElement(By.name("message")).sendKeys(data1.get(0).get(2)+ "\n");
+        driver.findElement(By.name("message")).sendKeys(data1.get(1).get(2)+ "\n");
+        //driver.findElement(By.name("message")).sendKeys(data.get(1).get(0)+ "\n");
+        //driver.findElement(By.name("message")).sendKeys(data.get(1).get(1));
         System.out.println("I enter comments");
     }
 
@@ -121,8 +138,9 @@ public class ContactUsSteps {
 
     @After()
         public void teardown(){
-
-        driver.quit();
+        //driver.manage().deleteAllCookies();
+        //driver.close();
+        //driver.quit();
     }
 
 
