@@ -9,8 +9,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/java/CucumberFramework/FeatureFiles/login/"},
         glue = {"CucumberFramework.Steps.login"},
-        monochrome = true,
-        tags = {},
+        monochrome = false,
+        tags = {"@chrom"},
+        dryRun = false,
         plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json", "com.cucumber.listener.ExtentCucumberFormatter:target/report.html"}
 )
 

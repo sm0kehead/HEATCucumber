@@ -1,3 +1,4 @@
+@chrom
 Feature: Login into account
 
   Scenario Outline: login page
@@ -12,3 +13,11 @@ Feature: Login into account
       |  url                            | username | password | message |
       | http://webdriveruniversity.com/ | login1   | pass1    |    validation failed |
       | http://webdriveruniversity.com/ | webdriver   | webdriver123    |    validation succeeded |
+
+
+  Scenario Outline: login page
+    Given I access "<url>"
+
+    Examples:
+      |  url                            | username | password | message |
+      | http://webdriveruniversity.com/ | login1   | pass1    |    validation failed |
