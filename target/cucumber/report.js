@@ -90,7 +90,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 4644727001,
+  "duration": 4529729760,
   "status": "passed"
 });
 formatter.scenario({
@@ -159,14 +159,14 @@ formatter.match({
   "location": "LoginInToAccount.i_access(String)"
 });
 formatter.result({
-  "duration": 846153818,
+  "duration": 1164596116,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginInToAccount.i_click_on_the_loggin_button()"
 });
 formatter.result({
-  "duration": 179607372,
+  "duration": 177634988,
   "status": "passed"
 });
 formatter.match({
@@ -179,7 +179,7 @@ formatter.match({
   "location": "LoginInToAccount.i_enter_a_username(String)"
 });
 formatter.result({
-  "duration": 1126973835,
+  "duration": 1133180657,
   "status": "passed"
 });
 formatter.match({
@@ -192,14 +192,14 @@ formatter.match({
   "location": "LoginInToAccount.i_enter_a_password(String)"
 });
 formatter.result({
-  "duration": 61440376,
+  "duration": 70766195,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginInToAccount.i_click_on_the_login_button()"
 });
 formatter.result({
-  "duration": 60205595,
+  "duration": 62165025,
   "status": "passed"
 });
 formatter.match({
@@ -212,15 +212,15 @@ formatter.match({
   "location": "LoginInToAccount.prompt_alert(String)"
 });
 formatter.result({
-  "duration": 8753962,
+  "duration": 8665718,
   "status": "passed"
 });
 formatter.after({
-  "duration": 830315000,
+  "duration": 845884942,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3573061575,
+  "duration": 3529239639,
   "status": "passed"
 });
 formatter.scenario({
@@ -289,14 +289,14 @@ formatter.match({
   "location": "LoginInToAccount.i_access(String)"
 });
 formatter.result({
-  "duration": 717118489,
+  "duration": 808435974,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginInToAccount.i_click_on_the_loggin_button()"
 });
 formatter.result({
-  "duration": 194203386,
+  "duration": 162797550,
   "status": "passed"
 });
 formatter.match({
@@ -309,7 +309,7 @@ formatter.match({
   "location": "LoginInToAccount.i_enter_a_username(String)"
 });
 formatter.result({
-  "duration": 1133322782,
+  "duration": 1135037205,
   "status": "passed"
 });
 formatter.match({
@@ -322,14 +322,14 @@ formatter.match({
   "location": "LoginInToAccount.i_enter_a_password(String)"
 });
 formatter.result({
-  "duration": 73930771,
+  "duration": 74568273,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginInToAccount.i_click_on_the_login_button()"
 });
 formatter.result({
-  "duration": 71469233,
+  "duration": 64539044,
   "status": "passed"
 });
 formatter.match({
@@ -342,11 +342,11 @@ formatter.match({
   "location": "LoginInToAccount.prompt_alert(String)"
 });
 formatter.result({
-  "duration": 7163990,
+  "duration": 7078661,
   "status": "passed"
 });
 formatter.after({
-  "duration": 834360311,
+  "duration": 859582778,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -392,7 +392,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 3602028600,
+  "duration": 3711019133,
   "status": "passed"
 });
 formatter.scenario({
@@ -427,11 +427,11 @@ formatter.match({
   "location": "LoginInToAccount.i_access(String)"
 });
 formatter.result({
-  "duration": 713046193,
+  "duration": 835369240,
   "status": "passed"
 });
 formatter.after({
-  "duration": 717911288,
+  "duration": 2955339264,
   "status": "passed"
 });
 });
