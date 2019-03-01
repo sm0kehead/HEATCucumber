@@ -25,34 +25,34 @@ import static org.testng.Assert.assertEquals;
 public class LoginInToAccount {
 
     WebDriver driver;
-
-    @Before("@chrom")
-    public void setupch() throws IOException {
-
-        //System.setProperty("webdriver.gecko.driver", "C:\\Users\\ArturWójtowicz\\Documents\\GitHub\\CucumberHEAT2\\src\\test\\java\\CucumberFramework\\resources\\geckodriver.exe");
-        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\ArturWójtowicz\\Documents\\GitHub\\CucumberHEAT2\\src\\test\\java\\CucumberFramework\\resources\\chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", Paths.get(System.getProperty("user.dir")).toRealPath() + "\\src\\test\\java\\CucumberFramework\\resources\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-    }
-
-    @Before("@ff")
-    public void setupff() {
-
-        //System.setProperty("webdriver.gecko.driver", "C:\\Users\\ArturWójtowicz\\Documents\\GitHub\\CucumberHEAT2\\src\\test\\java\\CucumberFramework\\resources\\geckodriver.exe");
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\ArturWójtowicz\\Documents\\GitHub\\CucumberHEAT2\\src\\test\\java\\CucumberFramework\\resources\\geckodriver.exe");
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-    }
-
-    @After("@chrom")
-    public void tearDown(){
-        driver.manage().deleteAllCookies();
-        driver.close();
-        driver.quit();
-    }
+//
+//    @Before("@chrom")
+//    public void setupch() throws IOException {
+//
+//        //System.setProperty("webdriver.gecko.driver", "C:\\Users\\ArturWójtowicz\\Documents\\GitHub\\CucumberHEAT2\\src\\test\\java\\CucumberFramework\\resources\\geckodriver.exe");
+//        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\ArturWójtowicz\\Documents\\GitHub\\CucumberHEAT2\\src\\test\\java\\CucumberFramework\\resources\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", Paths.get(System.getProperty("user.dir")).toRealPath() + "\\src\\test\\java\\CucumberFramework\\resources\\chromedriver.exe");
+//        driver = new ChromeDriver();
+//        driver.manage().window().maximize();
+//        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+//    }
+//
+//    @Before("@ff")
+//    public void setupff() {
+//
+//        //System.setProperty("webdriver.gecko.driver", "C:\\Users\\ArturWójtowicz\\Documents\\GitHub\\CucumberHEAT2\\src\\test\\java\\CucumberFramework\\resources\\geckodriver.exe");
+//        System.setProperty("webdriver.gecko.driver", "C:\\Users\\ArturWójtowicz\\Documents\\GitHub\\CucumberHEAT2\\src\\test\\java\\CucumberFramework\\resources\\geckodriver.exe");
+//        driver = new FirefoxDriver();
+//        driver.manage().window().maximize();
+//        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+//    }
+//
+//    @After("@chrom")
+//    public void tearDown(){
+//        driver.manage().deleteAllCookies();
+//        driver.close();
+//        driver.quit();
+//    }
     @Given("^I access \"([^\"]*)\"$")
     public void i_access(String url) throws Throwable {
         driver.get(url);

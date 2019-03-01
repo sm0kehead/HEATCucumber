@@ -14,8 +14,8 @@ Feature: Submit data to webdriveruniversity.com using contact us form
     Then the information should successfully be submitted via the contact us form
 
   Examples:
-    | 1st | 2nd |
-    | 2   | a   |
-    | 3   | b   |
-    | 4   | c   |
-    | 5   | d   |
+    | 1st     | 2nd   |
+    | adam    | lol   |
+    | lukasz  | lol1  |
+    | miachal | lol2  |
+    | wojtek  | lol3  |
